@@ -65,7 +65,7 @@
         };
       in
       {
-        packages.hello-world = localRustBuild;
+        packages.nix-flake-docker = localRustBuild;
 
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [ cargo rustc ];
