@@ -11,13 +11,8 @@ jobs:
     steps:
     # Check out the package
     - uses: actions/checkout@v4
-
-    # Install Nix
-    - uses: cachix/install-nix-action@v27
-      with:
-        nix_path: nixpkgs=channel:nixos-unstable
-
-    # Cache the nix store
+    
+    # Install Nix and cache its store
     - uses: nixbuild/nix-quick-install-action@v27
     - name: Restore and cache Nix store
       uses: nix-community/cache-nix-action@v5
