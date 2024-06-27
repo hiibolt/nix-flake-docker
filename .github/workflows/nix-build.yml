@@ -1,5 +1,10 @@
 name: nix-test
-on: push
+
+# Configures this workflow to run every time a change is pushed to the branch called `master`.
+on:
+  push:
+    branches: ['master']
+    
 jobs:
   build:
     runs-on: ubuntu-latest
